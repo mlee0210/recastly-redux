@@ -9,7 +9,14 @@ import store from './store/store.js';
 //TODO: Use the Provider component to make your store available to
 //  the rest of your app.
 
+// ReactDOM.render(
+//   <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
+//   document.getElementById('app')
+// );
+
 ReactDOM.render(
-    <App API_KEY={YOUTUBE_API_KEY} searchYouTube={searchYouTube} />,
+  <Provider store={store}>
+    <App searchYouTube={searchYouTube} />
+  </Provider>,
   document.getElementById('app')
 );
